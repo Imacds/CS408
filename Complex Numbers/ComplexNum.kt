@@ -4,7 +4,7 @@ class ComplexNum(a: Double = 0.0) {
 	var real: Double
 	// Imaginary property
 	var imaginary: Double = 0.0
-
+	
 	// Primary constructor, initializes the real element
 	init {
 		real = a
@@ -15,9 +15,9 @@ class ComplexNum(a: Double = 0.0) {
 		imaginary = b
 	}
 	
-    constructor(a: Number, b: Number) : this(a.toDouble(), b.toDouble())
+	constructor(a: Number, b: Number) : this(a.toDouble(), b.toDouble())
 
-    // Higher order function, takes in the "op" function as a parameter and does it on reals and imaginaries
+	// Higher order function, takes in the "op" function as a parameter and does it on reals and imaginaries
 	private fun doOpOnBoth(other: ComplexNum, op: Double.(Double) -> Double): ComplexNum {
 		return ComplexNum(real.op(other.real), (imaginary.op(other.imaginary)))
 	}
@@ -30,24 +30,22 @@ class ComplexNum(a: Double = 0.0) {
 		return doOpOnBoth(other, (Double::plus))
 	}
     
-    operator fun times(other: ComplexNum): ComplexNum {
-        return ComplexNum(real * other.real - imaginary * other.imaginary, real * other.imaginary + imaginary * other.real)
-
-
-    }
+	operator fun times(other: ComplexNum): ComplexNum {
+		return ComplexNum(real * other.real - imaginary * other.imaginary, real * other.imaginary + imaginary * other.real)
+	}
    
-    operator fun div(other: ComplexNum): ComplexNum {
-        val denom = other.real * other.real + other.imaginary * other.imaginary
-        val realNum = real * other.real + imaginary * other.imaginary
-        val imagNum = imaginary * other.real + real * other.imaginary
-        return ComplexNum(realNum/denom, imagNum/denom)
-    }
+	operator fun div(other: ComplexNum): ComplexNum {
+		val denom = other.real * other.real + other.imaginary * other.imaginary
+		val realNum = real * other.real + imaginary * other.imaginary
+		val imagNum = imaginary * other.real + real * other.imaginary
+		return ComplexNum(realNum/denom, imagNum/denom)
+	}
 
 	override fun toString(): String {
 		return "" + real + " + " + imaginary + "i"
 	}
     
-    infix inline fun doIt(other: ComplexNum) {
+	infix inline fun doIt(other: ComplexNum) {
 		println("" + this + " " + other)
 	}
 }

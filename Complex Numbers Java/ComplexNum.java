@@ -1,5 +1,5 @@
 
-public class ComplexNum extends Number{
+public class ComplexNum extends Number {
 	
 	private double real;
 	private double imaginary;

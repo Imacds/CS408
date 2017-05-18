@@ -45,7 +45,4 @@ class ComplexNum(a: Double = 0.0) {
 		return "" + real + " + " + imaginary + "i"
 	}
     
-	infix inline fun doIt(other: ComplexNum) {
-		println("" + this + " " + other)
-	}
 }

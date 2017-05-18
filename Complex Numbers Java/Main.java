@@ -1,4 +1,4 @@
-
+)
 public class Main {
 
 	public static void main(String[] args) {
@@ -16,7 +16,7 @@ public class Main {
 		ComplexNum z = new ComplexNum(0.0, 3.0);
 		
 		System.out.println("(X + Z) -> " + x.add(z));
-		System.out.println("(X/Y + Z -> " + (x.divide(y)).add(z));
+		System.out.println("(X/Y + Z) -> " + (x.divide(y)).add(z));
 	}
 
 }

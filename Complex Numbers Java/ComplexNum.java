@@ -9,11 +9,19 @@ public class ComplexNum {
 		imaginary = b;
 	}
 	
+	public ComplexNum(double a) {
+		this(a, 0.0);
+	}
+	
+	public ComplexNum() {
+		this(0.0);
+	}
+	
 	public double getReal() {
 		return real;
 	}
 	
-	public void setReal(double a) {
+	private void setReal(double a) {
 		real = a;
 	}
 	
@@ -21,7 +29,7 @@ public class ComplexNum {
 		return imaginary;
 	}
 	
-	public void setImagianry(double b) {
+	private void setImagianry(double b) {
 		imaginary= b;
 	}
 	

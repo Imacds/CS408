@@ -1,5 +1,5 @@
-class ComplexNum(a: Double = 0.0) {
-
+class ComplexNum(a: Double = 0.0) : Number() {
+	
 	// Real property
 	var real: Double
 	// Imaginary property
@@ -43,6 +43,34 @@ class ComplexNum(a: Double = 0.0) {
 
 	override fun toString(): String {
 		return "" + real + " + " + imaginary + "i"
+	}
+	
+	override fun toByte(): Byte {
+		return real.toByte()
+	}
+	
+	override fun toChar() : Char {
+		return real.toChar()
+	}
+	
+	override fun toDouble() : Double {
+		return real
+	}
+	
+	override fun toInt() : Int {
+		return real.toInt()
+	}
+	
+	override fun toLong() : Long {
+		return real.toLong()
+	}
+	
+	override fun toShort() : Short {
+		return real.toShort()
+	}
+	
+	override fun toFloat() : Float {
+		return real.toFloat()
 	}
     
 }

@@ -1,14 +1,14 @@
 class ComplexNum(a: Double = 0.0) : Number() {
 	
+	// The primary constructor (above) initializes the real element
 	// Real property
-	var real: Double
+	var real: Double = a
+		private set // default setter to private for this property
+					// default getter to public for this property
+	
 	// Imaginary property
 	var imaginary: Double = 0.0
-	
-	// Primary constructor, initializes the real element
-	init {
-		real = a
-	}
+					// default setter & getter to public for this property
 	
 	// Secondary constructor, initializes the imaginary element if provided
 	constructor(a: Double = 0.0, b: Double) : this(a) {

@@ -3,7 +3,7 @@
  * CS 408: Programming Languages
  * Project 1: Set Data Structure
  * Description: Implement a Set data structure using ADTs and non ADTs. The Set operations that should surely be included are
- * 				union, intersection, and difference. Create a driver to test the operations and allow a user to use the operations.
+ * 		union, intersection, and difference. Create a driver to test the operations and allow a user to use the operations.
  */
 
 import java.util.ArrayList;

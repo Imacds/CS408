@@ -89,15 +89,13 @@ public class Main {
 				nonADTMenu();
 				input = kb.next();
 			}
-			else if (input.equals("e")) {
-				System.out.println("Exiting the program.");
-			}
 			else {
 				System.out.println("That is not a valid command.");
 				nonADTMenu();
 				input = kb.next();
 			}
 		}
+		System.out.println("Exiting the program.");
 	}
 
 	/**

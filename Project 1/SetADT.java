@@ -83,7 +83,6 @@ public class SetADT<T> {
 		for (int i = 0; i < set2.size(); i++) {
 			if (!setList.contains(set2.get(i))) {
 				unionSet.addElement(set2.get(i));
-//				setList.add(set2.get(i));
 			}
 			else {
 				System.out.println("The element \"" + set2.get(i) + "\" already exists in the set!");
@@ -109,23 +108,23 @@ public class SetADT<T> {
 	 * Difference of two Sets. Consists of elements that are in Set 1 (setList), 
 	 * but NOT in B.
 	 */
-//	public SetADT<T> difference(SetADT<T> set2) {
-//		SetADT<T> differenceSet = new SetADT<>();
-//		for (T element : setList) {
-//			differenceSet.addElement(element);
-//		}
-//		for (int i = 0; i < set2.size(); i++) {
-//			if (differenceSet.contains(set2.get(i))) {
-//				differenceSet.removeElement(set2.get(i));
-//				System.out.println("Removing: " + set2.get(i));
-//			}
-//			else {
-//				differenceSet.addElement(set2.get(i));
-//				System.out.println("Adding: " + set2.get(i));
-//			}
-//		}
-//		return differenceSet;
-//	}
+	public SetADT<T> difference(SetADT<T> set2) {
+		SetADT<T> differenceSet = new SetADT<>();
+		for (T element : setList) {
+			differenceSet.addElement(element);
+		}
+		for (int i = 0; i < set2.size(); i++) {
+			if (differenceSet.contains(set2.get(i))) {
+				differenceSet.removeElement(set2.get(i));
+				System.out.println("Removing: " + set2.get(i));
+			}
+			else {
+				differenceSet.addElement(set2.get(i));
+				System.out.println("Adding: " + set2.get(i));
+			}
+		}
+		return differenceSet;
+	}
 	
 	/**
 	 * Print the set as a String.

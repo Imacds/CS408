@@ -82,17 +82,6 @@ int main() {
 		}
 	}
 	cout << "Exiting the program." << endl;
-
-
-
-
-
-
-
-
-
-
-
 	return 0;
 }
 
@@ -133,18 +122,20 @@ vector<int> operator&(vector<int> set1, vector<int> set2) {
  */
 vector<int> operator-(vector<int> set1, vector<int> set2) {
 	vector<int> output;
+	vector<int>::iterator it;
 	for (int i = 0; i < set1.size(); i++) {
 		output.push_back(set1[i]);
 	}
 	for (int i = 0; i < set2.size(); i++) {
-		vector<int>::iterator vectorPosition = find(output.begin(), output.end(), set2[i]);
-		if (vectorPosition != output.end()) {
-			output.erase(vectorPosition);
+		if (find(output.begin(), output.end(), set2[i]) != output.end()) {
+			it = find(output.begin(), output.end(), set2[i]);
+			output.erase(it);
 		}
 		else {
 			output.push_back(set2[i]);
 		}
 	}
+	return output;
 }
 
 /**
@@ -168,7 +159,3 @@ void nonADTMenu() {
 	cout << "\"d\" : perform difference between the two sets" << endl;
 	cout << "\"e\" : exit this program" << endl;
 }
-
-
-
-

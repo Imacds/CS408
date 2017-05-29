@@ -105,8 +105,7 @@ public class SetADT<T> {
 	}
 	
 	/**
-	 * Difference of two Sets. Consists of elements that are in Set 1 (setList), 
-	 * but NOT in B.
+	 * Difference of two Sets.
 	 */
 	public SetADT<T> difference(SetADT<T> set2) {
 		SetADT<T> differenceSet = new SetADT<>();

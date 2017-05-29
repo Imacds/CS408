@@ -176,7 +176,7 @@ public class Main {
 			set1.addElement(input);
 			input = (T)kb.next();
 		}
-		System.out.println("First set inputted: " + set1.toString());
+		System.out.println("First set inputed: " + set1.toString());
 		
 		// Ask for second Set
 		SetADT<T> set2 =  new SetADT<>();
@@ -186,7 +186,7 @@ public class Main {
 			set2.addElement(input2);
 			input2 = (T)kb.next();
 		}
-		System.out.println("Second set inputted: " + set2.toString());
+		System.out.println("Second set inputed: " + set2.toString());
 		
 		// Menu
 		printMenu();

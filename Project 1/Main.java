@@ -68,45 +68,34 @@ public class Main {
 		}
 		System.out.println("Set 2: " + nonADTSet2.toString());
 		
-		nonADTMenu();
+		printMenu();
 		String input = kb.next();
 		while (!input.equals("e")) {
 			if (input.equals("u")) {
 				ArrayList<Integer> nonADTUnion = union(nonADTSet1, nonADTSet2);
 				System.out.println("Union of Set 1 and Set 2: " + nonADTUnion.toString());
-				nonADTMenu();
+				printMenu();
 				input = kb.next();
 			}
 			else if (input.equals("i")) {
 				ArrayList<Integer> nonADTIntersection = intersection(nonADTSet1, nonADTSet2);
 				System.out.println("Intersection of Set 1 and Set 2: " + nonADTIntersection.toString());
-				nonADTMenu();
+				printMenu();
 				input = kb.next();
 			}
 			else if (input.equals("d")) {
 				ArrayList<Integer> nonADTDifference = difference(nonADTSet1, nonADTSet2);
 				System.out.println("Difference of Set 1 and Set 2: " + nonADTDifference.toString());
-				nonADTMenu();
+				printMenu();
 				input = kb.next();
 			}
 			else {
 				System.out.println("That is not a valid command.");
-				nonADTMenu();
+				printMenu();
 				input = kb.next();
 			}
 		}
 		System.out.println("Exiting the program.");
-	}
-
-	/**
-	 * This menu is for the non-ADT version of Set.
-	 */
-	public static void nonADTMenu() {
-		System.out.println("What would you like to do with your sets?");
-		System.out.println("\"u\" : perform union between the two sets");
-		System.out.println("\"i\" : perform intersection between the two sets");
-		System.out.println("\"d\" : perform difference between the two sets");
-		System.out.println("\"e\" : exit this program");
 	}
 	
 	/**

@@ -1,14 +1,14 @@
-class ComplexNum(a: Double = 0.0) {
-
+class ComplexNum(a: Double = 0.0) : Number() {
+	
+	// The primary constructor (above) initializes the real element
 	// Real property
-	var real: Double
+	var real: Double = a
+		private set // default setter to private for this property
+					// default getter to public for this property
+	
 	// Imaginary property
 	var imaginary: Double = 0.0
-	
-	// Primary constructor, initializes the real element
-	init {
-		real = a
-	}
+					// default setter & getter to public for this property
 	
 	// Secondary constructor, initializes the imaginary element if provided
 	constructor(a: Double = 0.0, b: Double) : this(a) {
@@ -44,8 +44,33 @@ class ComplexNum(a: Double = 0.0) {
 	override fun toString(): String {
 		return "" + real + " + " + imaginary + "i"
 	}
-    
-	infix inline fun doIt(other: ComplexNum) {
-		println("" + this + " " + other)
+	
+	override fun toByte(): Byte {
+		return real.toByte()
 	}
+	
+	override fun toChar() : Char {
+		return real.toChar()
+	}
+	
+	override fun toDouble() : Double {
+		return real
+	}
+	
+	override fun toInt() : Int {
+		return real.toInt()
+	}
+	
+	override fun toLong() : Long {
+		return real.toLong()
+	}
+	
+	override fun toShort() : Short {
+		return real.toShort()
+	}
+	
+	override fun toFloat() : Float {
+		return real.toFloat()
+	}
+    
 }

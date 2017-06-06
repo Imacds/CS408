@@ -1,5 +1,5 @@
 
-public class ComplexNum {
+public class ComplexNum extends Number {
 	
 	private double real;
 	private double imaginary;
@@ -60,6 +60,28 @@ public class ComplexNum {
 
 	public String toString() {
 		return "" + real + " + " + imaginary + "i";
+	}
+
+	/* Extends Number */
+	@Override
+	public int intValue() {
+		return (int)real;
+	}
+
+	@Override
+	public long longValue() {
+		return (long)real;
+	}
+
+	@Override
+	public float floatValue() {
+		return (float)real;
+	}
+
+	@Override
+	public double doubleValue() {
+		// TODO Auto-generated method stub
+		return real;
 	}
 
 }
